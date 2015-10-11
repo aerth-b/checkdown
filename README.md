@@ -13,5 +13,7 @@ RELEASED WITH THE MIT LICENSE
 ## Install
 
 ### Linux / Unix / OSX
-cat checkdown;echo "Using sudo to copy script to /usr/local/bin/";sudo cp checkdown /usr/local/bin/;sudo chown +x /usr/local/bin/checkdown
 
+```shell
+cat checkdown;echo "Using sudo to copy script to /usr/local/bin/";sudo cp checkdown /usr/local/bin/;sudo chown +x /usr/local/bin/checkdown
+```
