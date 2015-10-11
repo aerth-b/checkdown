@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# #############################################
+#                                             #
+#     Checkdown v0.1                          #
+#                                             #
+#       Checks if a website is down           #
+#       Checks if domain is resolving         #
+#                                             #
+# #############################################
+# Copyright 2015 aerth@isupon.us   UCC 1-308  #
+# This little snippet was started by aerth.   #
+# http://critter.space http://earthbot.net    #
+# Contributors are welcome! github.com/aerth  #
+# This software is MIT licensed! Have fun!    #
+# #############################################
+
+if [[ $1 == "https://"* ]]
+then
+  echo "SSL not supported yet! Try http:// instead of https://!";
+  exit 0;
+fi
+
+if [[ $1 == "http://"* ]]
+then
+  echo "Not adding http:// ! Should work!";
+  firefox --new-tab http://anonymouse.org/cgi-bin/anon-www.cgi/$1
+  exit 0;
+else
+  echo "Adding http:// to ".$1;
+  URL="http://"$1
+  echo $URL;
+  firefox --new-tab http://anonymouse.org/cgi-bin/anon-www.cgi/$URL
+  exit 0;
+
+
+fi
+
+echo "Something bad happened. No logs to check.";
+exit 0;
+
+
