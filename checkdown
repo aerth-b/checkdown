@@ -36,7 +36,11 @@ else
 
 fi
 
+
+# Shouldn't get this far. 
+
 echo "Something bad happened. No logs to check.";
 exit 0;
 
 
+# END OF FILE
