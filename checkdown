@@ -14,6 +14,17 @@
 # Contributors are welcome! github.com/aerth  #
 # This software is MIT licensed! Have fun!    #
 # #############################################
+[ $# -eq 0 ] && { echo "Usage: $0 domain.name" ; echo "Help: checkdown -h"; exit 1; }
+
+
+if [ $1 = '-h' ]
+then
+    echo "HELP MODE"
+    echo ""
+    echo "Help is coming soon!"
+    exit
+fi
+
 
 if [[ $1 == "https://"* ]]
 then
